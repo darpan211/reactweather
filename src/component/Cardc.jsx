@@ -46,9 +46,14 @@ export default function Cardc() {
     // fetchApi();
 
     /// by Using fetch() API Call
-	  const ur = location.protocol;
+	  let ur = location.protocol;
 	  console.log(ur);
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=b36d38b366e62b7ce3c598f283b78a2b`)
+	  if(ur === 'http'){
+	  	return ur;
+	  }else{
+	  	return ur = "https";
+	  }
+    fetch(`${ur}://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=b36d38b366e62b7ce3c598f283b78a2b`)
       .then(res => res.json())
       .then(
         (result) => {
