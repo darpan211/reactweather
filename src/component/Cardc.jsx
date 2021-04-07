@@ -46,7 +46,7 @@ export default function Cardc() {
     // fetchApi();
 
     /// by Using fetch() API Call
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=b36d38b366e62b7ce3c598f283b78a2b`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=b36d38b366e62b7ce3c598f283b78a2b`)
       .then(res => res.json())
       .then(
         (result) => {
