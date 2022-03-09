@@ -35,6 +35,7 @@ const cs = {
 export default function Cardc() {
   const [city, setCity] = useState(null);
   const [search, setSearch] = useState("Surat");
+  
   useEffect(() => {
     /// ASYNC Await Using API Call
     // const fetchApi = async ()=> {
